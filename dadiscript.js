@@ -26,7 +26,9 @@ elementi da qualsiasi array, anche se non conosciamo a priori quanti elementi co
 
 const btnCalcola = document.getElementById("btn-random-number");
 
-let inputMoltiplicatore = document.querySelector("[name='moltiplicatore']");
+let inputMoltiplicatore = "";
+
+let inputMoltiplicatoreCp = "";
 
 
 console.dir(btnCalcola);
@@ -46,9 +48,11 @@ btnCalcola.addEventListener("click", function () {
         let inputMoltiplicatore = Math.round(Math.random()*5)+1;
         console.log(inputMoltiplicatore);
 
+        let inputMoltiplicatoreCp = Math.round(Math.random()*5)+1;
+        console.log(inputMoltiplicatoreCp);
 
         resultRandom.innerHTML += `<li>${inputMoltiplicatore}</li>`;
-        resultRandomCp.innerHTML += `<li>${inputMoltiplicatore}</li>`;
+        resultRandomCp.innerHTML += `<li>${inputMoltiplicatoreCp}</li>`;
     }
     
 }
