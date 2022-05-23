@@ -13,6 +13,8 @@ Prima di partire a scrivere codice poniamoci qualche domanda:
 C’è forse un array da qualche parte?
 Se dobbiamo confrontare qualcosa che “cosa” ci serve?
 
+Math.round(Math.random()*5)+1;
+
 
 Esercizio Bonus: la coda dell’array
 Creare un array con un numero a piacere di elementi.
@@ -21,3 +23,33 @@ Attenzione #1: quanti elementi minimo dovrà contenere l’array?
 Attenzione #2: il ciclo deve essere costruito per estrarre gli ultimi 
 elementi da qualsiasi array, anche se non conosciamo a priori quanti elementi contiene
 */
+
+const btnCalcola = document.getElementById("btn-random-number");
+
+let inputMoltiplicatore = document.querySelector("[name='moltiplicatore']");
+
+
+console.dir(btnCalcola);
+console.dir(inputMoltiplicatore);
+
+const resultRandom = document.querySelector(".result-random");
+resultRandom.innerHTML = "";
+
+const resultRandomCp = document.querySelector(".result-random-cp");
+resultRandomCp.innerHTML = "";
+
+btnCalcola.addEventListener("click", function () {
+    // controllo che il click funzioni correttamente
+    console.log("Pulsante calcola cliccato");
+
+    for(let i = 1; i <= 6; i++){
+        let inputMoltiplicatore = Math.round(Math.random()*5)+1;
+        console.log(inputMoltiplicatore);
+
+
+        resultRandom.innerHTML += `<li>${inputMoltiplicatore}</li>`;
+        resultRandomCp.innerHTML += `<li>${inputMoltiplicatore}</li>`;
+    }
+    
+}
+)
