@@ -43,6 +43,7 @@ if(richiestaEmail != elemento1 && richiestaEmail != elemento2 && richiestaEmail 
     console.log = ("testo di risposta al rifiuto");
 }else{
     text= richiestaEmail.toString()
+    colorClass= "bg-warning"
 }
 
 const nomiDellaLista = document.getElementById("lista-email")
